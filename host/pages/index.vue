@@ -1,24 +1,27 @@
 <script setup>
-import { defineAsyncComponent } from "vue";
-const Header = defineAsyncComponent(() => import("remote/Header"));
+// import { defineAsyncComponent } from "vue";
+// const Header = defineAsyncComponent(() => import("remote/Header"));
+import Header from 'remote/Header'
 </script>
 
 <template>
-    <div>
-        <Header />
-        <h2>Page Section</h2>
-        <nav>
-            <ul>
-                <li>
-                    <NuxtLink to="/contact">Contact</NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/posts/1">Go to post number 1</NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/restricted">Go restricted route</NuxtLink>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <div class="container">
+      <Header />
+      <div>Name: LOCAL</div>
+      <div>Framework: Vue 3 - Nuxt 3</div>
+      <div>:Vite</div>
+  </div>
 </template>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  font-size: 3rem;
+  margin: auto;
+  max-width: 800px;
+  margin-top: 20px;
+}
+</style>
